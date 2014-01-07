@@ -161,6 +161,23 @@ set background=dark
 		Bundle "honza/vim-snippets"
 	" End SnipMate plugins }}}
 	Bundle 'ctrlp.vim'
+	" nastavitve za ctrlp {{{
+		" Set no max file limit
+		let g:ctrlp_max_files = 0
+		" Search from current directory instead of project root
+		let g:ctrlp_working_path_mode = 0
+
+		" Ignore these directories
+		set wildignore+=*/out/**
+		set wildignore+=*/vendor/**
+
+		" Search in certain directories a large project (hardcoded for now)
+		cnoremap %proj <c-r>=expand('~/Projects/some-project')<cr>
+		" ga = go api
+		map <Leader>ga :CtrlP %proj/api/<cr>
+		" gf = go frontend
+		map <Leader>gf :CtrlP %proj/some/long/path/to/frontend/code/<cr>
+		"END }}}
 	Bundle 'https://github.com/terryma/vim-multiple-cursors'
 	Bundle "mattn/emmet-vim"
 	Bundle 'scrooloose/nerdtree'
@@ -169,6 +186,7 @@ set background=dark
 	Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 	Bundle 'tpope/vim-rails.git'
 	Bundle 'L9'
+	Bundle 'https://github.com/mileszs/ack.vim'
 	Bundle 'https://github.com/tomtom/tcomment_vim'
 	Bundle 'https://github.com/tpope/vim-surround'
 	Bundle 'https://github.com/Shougo/neocomplcache.vim'
