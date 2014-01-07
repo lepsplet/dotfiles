@@ -1,5 +1,5 @@
-colorscheme monokai
-set background=dark
+set background=light
+colorscheme solarized
 
 " mappings (leader, tab moving) {{{
 	let mapleader = "\<Space>"
