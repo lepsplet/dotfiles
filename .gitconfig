@@ -1,0 +1,7 @@
+[user]
+	email = toni.cesarek@gmail.com
+	name = tonko
+[color]
+	ui = true
+[push]
+	default = simple
