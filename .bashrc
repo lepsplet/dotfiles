@@ -135,7 +135,6 @@ set nobackup
 set nowritebackup 
 set noswapfile   
 
-fortune | cowsay
 
 #to je zaradi vim colorscheme in poveča barve na 256
 
