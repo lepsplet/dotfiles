@@ -31,6 +31,9 @@ alias gd='git diff'
 alias go='git checkout '
 alias gh='log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'
 alias gl='git log --oneline '
+alias gp='git push '
+alias gpl='git pull '
+
 
 ######################################################################
 
