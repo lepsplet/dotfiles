@@ -1,9 +1,7 @@
-set background=light
-colorscheme solarized
-
 " mappings (leader, tab moving) {{{
 	let mapleader = "\<Space>"
 	nmap <leader>h :nohlsearch<CR>
+	nnoremap <leader>s :w<CR>
 	nmap <leader>t :NERDTreeToggle<CR>
 	nmap <leader>w <leader><leader>w
 	nmap <leader>b <leader><leader>b
@@ -44,8 +42,6 @@ colorscheme solarized
 	inoremap fj <Esc>
 	vnoremap fj <Esc>
 	nnoremap Y y$
-	nnoremap <C-s> :w<CR>
-	inoremap <C-s> <Esc>:w<CR>
 	nnoremap ZS :w<CR>:so %<CR>
 	nnoremap <C-v> "+p$
 	inoremap <C-v> <Esc>"+p$
@@ -125,7 +121,7 @@ colorscheme solarized
 	set timeoutlen=1000
 	set ttimeoutlen=100
 " END set cmd, folding }}}
-" let, gvim custom setup {{{
+" let, gvim and vim custom setup {{{
 	"costomization for vim-airline tab on the bottom
 	let g:airline_theme = 'bubblegum'
 	let g:airline_left_sep=''
@@ -133,11 +129,16 @@ colorscheme solarized
 
 	" gVim custom setup --------------------------------------------------
 	if has("gui")
+		set background=light
+		colorscheme solarized
+
 		set guioptions-=m  "remove menu bar
 		set guioptions-=T  "remove toolbar
 		set guioptions-=r  "remove right-hand scroll bar
 		set guioptions+=LlRrb "removes the left side scroll bar
 		set guioptions-=LlRrb "removes the left side scroll bar
+	else
+		colorscheme elflord
 	endif
 " END let, gvim custom setup }}}
 " vundle {{{
@@ -185,6 +186,7 @@ colorscheme solarized
 	Bundle 'Lokaltog/vim-easymotion'
 	Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 	Bundle 'tpope/vim-rails.git'
+	Bundle 'vim-ruby/vim-ruby'
 	Bundle 'L9'
 	Bundle 'https://github.com/mileszs/ack.vim'
 	Bundle 'https://github.com/tomtom/tcomment_vim'
@@ -276,6 +278,9 @@ colorscheme solarized
 		"}}}
 	Bundle 'git://git.wincent.com/command-t.git'
 	Bundle 'https://github.com/bling/vim-airline'
+	Bundle 'https://github.com/jiangmiao/auto-pairs'
+	Bundle 'https://github.com/tpope/vim-endwise'
+	Bundle 'https://github.com/gregsexton/MatchTag'
 	" Git repos on your local machine (i.e. when working on your own plugin)
 
 	"moji plugini !!!!
