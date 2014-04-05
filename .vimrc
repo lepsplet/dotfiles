@@ -128,7 +128,7 @@
 	let g:airline_right_sep=''
 
 	" gVim custom setup --------------------------------------------------
-	if has("gui")
+	if has('gui_running')
 		set background=light
 		colorscheme solarized
 
@@ -139,6 +139,7 @@
 		set guioptions-=LlRrb "removes the left side scroll bar
 	else
 		colorscheme elflord
+		set background=dark
 	endif
 " END let, gvim custom setup }}}
 " vundle {{{
