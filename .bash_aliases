@@ -46,3 +46,7 @@ alias irbs='irb --simple-prompt'
 
 #tmux kill sessions (all sessions)
 alias tks='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
+
+
+#go to postgreSQL
+alias psqlc='sudo -u postgres psql postgres'
